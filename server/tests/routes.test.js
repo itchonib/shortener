@@ -16,7 +16,7 @@ describe("Test example", () => {
         const shortUrlArr = res.body.shortUrl.split("/")
         expect(shortUrlArr[3].length).toEqual(5);
       })
-      .end((err, res) => {
+      .end((err, _res) => {
         if (err) return done(err);
         return done();
       });
@@ -29,9 +29,30 @@ describe("Test example", () => {
           longUrl: "itchonib.com",
         })
         .expect(400)
-        .end((err, res) => {
+        .end((err, _res) => {
           if (err) return done(err);
           return done();
         });
     });
+
+    it("SUCCESFUL GET, finds shortUrl and redirects", (done) => {
+    request(app)
+        .get("/YmNKx")
+        .expect(302)
+        .expect('Location', 'http://itchonib.com')
+        .end((err, _res) => {
+        if (err) return done(err);
+        return done();
+        });
+    });
+
+    it("FAILING GET, shortURL does not exist", (done) => {
+        request(app)
+          .get("/doesnotexist")
+          .expect(404)
+          .end((err, _res) => {
+            if (err) return done(err);
+            return done();
+          });
+      });
 });

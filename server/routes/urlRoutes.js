@@ -27,7 +27,7 @@ router.post("/api/url", (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const url = await Url.findOne({
-      shortUrl: process.env.BASE_URL + req.params.id,
+      shortUrl: `${process.env.BASE_URL}/${req.params.id}`,
     });
     res.redirect(url.longUrl);
   } catch (error) {
