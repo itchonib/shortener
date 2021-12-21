@@ -1,0 +1,24 @@
+@use "./variables" as *;
+//media queries
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+
+//spacings
+@mixin page-padding($size) {
+    padding: $size 0.5rem 0 0.5rem;
+  
+    @include desktop {
+      padding: $size 10% 0 10%;
+    }
+  }
+
+//custom rules
+@mixin space-reset {
+    margin: 0;
+    padding: 0;
+}

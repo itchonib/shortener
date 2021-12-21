@@ -1,0 +1,18 @@
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/typography" as *;
+
+body {
+  margin: 0;
+  font-family: 'Lato'
+}
+
+button 
+
+h1, h2, h3, h4, h5, h6, p {
+  @include space-reset;
+}
+
+#root {
+  height: 100vh;
+}
