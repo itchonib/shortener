@@ -22,3 +22,18 @@
     margin: 0;
     padding: 0;
 }
+
+@mixin label-text {
+    font-size: 14px;
+    margin-bottom: 0.75rem;
+}
+
+@mixin link-container {
+    border-radius: 8px;
+    border-radius: 1px solid black;
+    height: 2.5rem;
+    padding: 0.3rem;
+    font-size: 1.3rem;
+}
+
+

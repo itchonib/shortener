@@ -1,19 +1,16 @@
+@use "/src/styles/partials/mixins" as *;
+
 .input {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
 
     &__label {
-        font-size: 14px;
-        margin-bottom: 0.75rem;
+        @include label-text;
     }
 
     &__field {
-        border-radius: 8px;
-        border-radius: 1px solid black;
-        height: 2.5rem;
-        padding: 0.3rem;
-        font-size: 1.3rem;
+        @include link-container;
     }
 
     &__error {

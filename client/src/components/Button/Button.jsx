@@ -1,10 +1,11 @@
 import React from "react";
 import "./Button.scss";
 
-const SubmitButton = ({ type, copy, handleFn }) => {
+const Button = ({ type, copy, handleFn, dataCy }) => {
   return (
     <div className="button__wrapper">
       <button
+        data-cy={dataCy}
         type={type}
         className="button__element"
         onClick={handleFn ? () => handleFn() : () => {}}
@@ -16,4 +17,4 @@ const SubmitButton = ({ type, copy, handleFn }) => {
   );
 };
 
-export default SubmitButton;
+export default Button;

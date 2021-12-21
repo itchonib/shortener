@@ -15,7 +15,7 @@ const UrlConvertForm = ({ assignShortUrl }) => {
         return;
       }
 
-      if (!e.target.longUrl.value.includes("http://")) {
+      if (!e.target.longUrl.value.includes("https://")) {
         setErrorState(
           'Please make sure your URL is in the proper format. Ex: "http://gatherly.io"'
         );
@@ -37,7 +37,7 @@ const UrlConvertForm = ({ assignShortUrl }) => {
         label="Enter your url below"
         error={errorState}
       />
-      <Button copy="snip it" type="submit" />
+      <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
     </form>
   );
 };

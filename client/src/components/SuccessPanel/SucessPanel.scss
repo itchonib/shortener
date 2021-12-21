@@ -1,0 +1,15 @@
+@use "../../styles//partials/mixins.scss" as *;
+
+.success-panel {
+    &__message {
+        @include label-text;
+    }
+
+    &__link-container {
+        @include link-container;
+        border: solid 1px black;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+}
