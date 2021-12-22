@@ -1,3 +1,5 @@
+require('./services/cache');
+require('./db/models/urlModel') //review this line
 require("./db/config");
 const express = require("express");
 
