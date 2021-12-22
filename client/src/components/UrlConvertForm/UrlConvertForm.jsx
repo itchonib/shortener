@@ -2,8 +2,8 @@ import { useState } from "react";
 import InputField from "../InputField/InputField";
 import Button from "../Button/Button";
 import axios from "axios";
-import validUrl from 'valid-url'
-
+import validUrl from "valid-url";
+import './UrlConvertForm.scss'
 
 const UrlConvertForm = ({ assignShortUrl }) => {
   const [errorState, setErrorState] = useState("");
@@ -34,12 +34,14 @@ const UrlConvertForm = ({ assignShortUrl }) => {
 
   return (
     <form data-testid="form" onSubmit={handleSubmit}>
-      <InputField
-        id={"longUrl"}
-        label="Enter your url below"
-        error={errorState}
-      />
-      <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
+      <div className="form__row">
+        <InputField
+          id={"longUrl"}
+          label="Enter your url below"
+          error={errorState}
+        />
+        <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
+      </div>
     </form>
   );
 };

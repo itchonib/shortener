@@ -9,4 +9,7 @@
     justify-content: center;
     position: relative;
 
+    @include tablet {
+        padding: 0 3rem;
+    }
 }

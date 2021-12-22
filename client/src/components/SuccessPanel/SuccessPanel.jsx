@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Button/Button";
+import InputField from "../InputField/InputField";
 import Toast from "../Toast/Toast";
 import "./SucessPanel.scss";
 
@@ -17,11 +18,14 @@ const SuccessPanel = ({ shortUrl }) => {
 
   return (
     <div className="sucess-panel">
-      <p className="success-panel__message"> See your new short link below! </p>
-      <div className="success-panel__link-container">
-        <p> {shortUrl} </p>
+      <div className="success-panel__row">
+        <InputField
+          label="See your new short link below!"
+          id="shortUrl"
+          shortUrl={shortUrl}
+        />
+        <Button copy="copy" handleFn={handleCopy} dataCy={"btn__copy-link"} />
       </div>
-      <Button copy="copy" handleFn={handleCopy} dataCy={"btn__copy-link"} />
       <Toast type="success" message={message} />
     </div>
   );
