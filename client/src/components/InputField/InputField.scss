@@ -6,10 +6,8 @@
     margin: 1rem 0;
 
     @include tablet {
-        // flex-grow: .7;
-        // @include space-reset;
-        // position: relative;
-        @include wrapper-row;
+        flex-grow: .7;
+        @include space-reset;
     }
 
     &__label {

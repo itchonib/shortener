@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import './Toast.scss'
 
-const Toast = ({type, message}) => {
+const Toast = ({type, message, clearFn}) => {
     const [showToast, setShowToast] = useState(false)
 
     useEffect(()=>{
         setShowToast(true)
         return setTimeout(() => {
             setShowToast(false)
-        },3800)
+            clearFn()
+        },3500)
     },[message])
 
     if (!showToast) {

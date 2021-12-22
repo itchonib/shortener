@@ -7,6 +7,10 @@ import "./SucessPanel.scss";
 const SuccessPanel = ({ shortUrl }) => {
   const [message, setMessage] = useState("Link generated!");
 
+  const clearMessage = () => {
+    setMessage('')
+  }
+
   const handleCopy = () => {
     try {
       navigator.clipboard.writeText(shortUrl);
@@ -26,7 +30,7 @@ const SuccessPanel = ({ shortUrl }) => {
         />
         <Button copy="copy" handleFn={handleCopy} dataCy={"btn__copy-link"} />
       </div>
-      <Toast type="success" message={message} />
+      <Toast clearFn={clearMessage} type="success" message={message} />
     </div>
   );
 };
