@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 
 afterEach(cleanup)
 
-describe("<App />", () => {
+describe("<UrlConvertForm />", () => {
     test('Render Covert Form', () => {
         render(<UrlConvertForm />);
         const label = screen.getByText(/Enter your url below/i);

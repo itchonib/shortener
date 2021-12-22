@@ -10,7 +10,7 @@ const mockErrorState = {
     'Please make sure your URL is in a valid format. Ex: "http://gatherly.io"',
 };
 
-describe("Success Panel Component", () => {
+describe("<InputField />", () => {
   test("Check that input field renders correctly without error", async () => {
     render(<InputField id={"longUrl"} label="Enter your url below" />);
     expect(screen.queryByText(/valid/i)).toBeNull();

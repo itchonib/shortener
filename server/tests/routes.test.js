@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../app");
 
-describe("Test example", () => {
+describe("Url Route Tests", () => {
   it("SUCCESFUL POST /api/url", (done) => {
     request(app)
       .post("/api/url")

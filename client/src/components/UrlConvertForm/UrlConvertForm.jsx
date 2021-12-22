@@ -17,7 +17,7 @@ const UrlConvertForm = ({ assignShortUrl }) => {
 
       if (!e.target.longUrl.value.includes("http://")) {
         setErrorState(
-          'Please make sure your URL is in a valid format. Ex: "http://gatherly.io"'
+          'Please make sure your URL is in a valid format. Ex: "https://gatherly.io"'
         );
         return;
       }

@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 
 afterEach(cleanup);
 
-describe("Success Panel Component", () => {
+describe("<Button />", () => {
   test("Check that submit button renders correctly", async () => {
     render(<Button copy="snip it" type="submit" dataCy={"btn__submit"} />);
     expect(screen.getByText(/snip/i)).toBeInTheDocument();
