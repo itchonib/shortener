@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import InputField from "../InputField/InputField";
-import Toast from "../Toast/Toast";
+import Toast from "../Notification/Notification";
 import "./SucessPanel.scss";
 
 const SuccessPanel = ({ shortUrl }) => {

@@ -4,26 +4,14 @@ import InputField from "./InputField";
 
 afterEach(cleanup);
 
-const mockErrorState = {
-  empty: "A valid URL is required to proceed",
-  inValid:
-    'Please make sure your URL is in a valid format. Ex: "http://gatherly.io"',
+const mockLabel = {
+  default: "Enter your url below",
 };
 
 describe("<InputField />", () => {
-  test("Check that input field renders correctly without error", async () => {
-    render(<InputField id={"longUrl"} label="Enter your url below" />);
+  test("Check that input field renders", async () => {
+    render(<InputField id={"longUrl"} label={mockLabel.default} />);
     expect(screen.queryByText(/valid/i)).toBeNull();
-  });
-
-  test("Check that input field renders correctly with error", async () => {
-    render(
-      <InputField
-        id={"longUrl"}
-        label="Enter your url below"
-        error={mockErrorState.empty}
-      />
-    );
-    expect(screen.getByText(mockErrorState.empty)).toBeInTheDocument();
+    expect(screen.getByText(mockLabel.default)).toBeInTheDocument();
   });
 });

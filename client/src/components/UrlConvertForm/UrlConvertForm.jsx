@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import axios from "axios";
 import validUrl from "valid-url";
 import './UrlConvertForm.scss'
-import Toast from "../Toast/Toast";
+import Toast from "../Notification/Notification";
 
 const UrlConvertForm = ({ assignShortUrl }) => {
   const [errorState, setErrorState] = useState("");
@@ -43,7 +43,6 @@ const UrlConvertForm = ({ assignShortUrl }) => {
         <InputField
           id={"longUrl"}
           label="Enter your url below"
-          // error={errorState}
         />
         <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
       </div>
