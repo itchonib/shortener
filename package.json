@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "cypress": "npm run dev \"cd client && node_modules/.bin/cypress open\""
+    "cypress": "npm run dev \"cd client && npm run cypress\""
   },
   "keywords": [],
   "author": "",
