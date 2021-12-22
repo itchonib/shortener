@@ -24,7 +24,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "globals": {
+      "cy": true
+    }
   },
   "browserslist": {
     "production": [
@@ -38,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "cypress": "^9.2.0"
+  }
 }
