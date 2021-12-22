@@ -5,7 +5,7 @@ const InputField = ({id, label, shortUrl, error}) => {
     return (
         <div className="input">
             <label className='input__label'>{label}</label>
-            <input id={id} className='input__field' type="text" defaultValue={shortUrl}/>
+            <input id={id} className='input__field' name={id} type="text" defaultValue={shortUrl}/>
             {error && <p className="input__error"> {error} </p> }
         </div>
     )
