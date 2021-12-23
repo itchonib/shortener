@@ -89,5 +89,6 @@ REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
 ```
 3. Checkout into the feature branch with `git checkout feature/add-redis-cache`
-4. Once in the branch please run `npm run dev`. 
-5. Once you are done with the app, do not forget to run `brew services stop redis` to turn off the redis server.  
+4. Once in the branch, please run `npm i` again to install redis and utils.
+5. Once in the branch please run `npm run dev`. 
+6. Once you are done with the app, do not forget to run `brew services stop redis` to turn off the redis server.  
