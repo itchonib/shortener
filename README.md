@@ -83,12 +83,12 @@ This project utilized [redis](https://redis.io/) and [util](https://www.npmjs.co
 
 1. If you do not have redis installed, please install it by running `brew install redis`. Start redis with the following command: `brew services start redis` 
 2. Make sure to clone the repo with `git clone` and install all dependencies using `npm run install:all`
-3. In addtional to the what was listed above, please add the following to your .env file
+3. In addtion to the what was listed above in the set up section, please add the following to your .env file
 ```
 REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
 ```
 3. Checkout into the feature branch with `git checkout feature/add-redis-cache`
 4. Once in the branch, please run `npm i` again to install redis and utils.
-5. Once in the branch please run `npm run dev`. 
+5. Please run `npm run dev` to start the project. 
 6. Once you are done with the app, do not forget to run `brew services stop redis` to turn off the redis server.  
