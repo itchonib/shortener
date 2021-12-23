@@ -1,12 +1,8 @@
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/variables" as *;
 
-.home {
+.not-found {
     @include page-padding(0);
     @include page-setup;
-    position: relative;
-
-    @include tablet {
-        padding: 0 3rem;
-    }
+    align-items: center;
 }

@@ -16,6 +16,11 @@
         font-size: 1.5rem;
         border-radius: 8px;
 
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
         @include tablet {
             height: 3.3rem;
             border-radius: 0 8px 8px 0;

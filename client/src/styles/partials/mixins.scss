@@ -35,10 +35,15 @@
 
 @mixin link-container {
   border-radius: 8px;
-  border-radius: 1px solid black;
+  border: 1px solid black;
   height: 2.5rem;
   padding: 0.3rem;
   font-size: 1.3rem;
 }
 
-
+@mixin page-setup {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
