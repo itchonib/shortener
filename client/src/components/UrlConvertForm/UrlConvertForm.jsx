@@ -2,9 +2,16 @@ import { useState } from "react";
 import InputField from "../InputField/InputField";
 import Button from "../Button/Button";
 import axios from "axios";
+import validUrl from "valid-url";
+import './UrlConvertForm.scss'
+import Toast from "../Notification/Notification";
 
 const UrlConvertForm = ({ assignShortUrl }) => {
   const [errorState, setErrorState] = useState("");
+
+  const clearError = () => {
+    setErrorState('')
+  }
 
   const handleSubmit = async (e) => {
     try {
@@ -15,9 +22,9 @@ const UrlConvertForm = ({ assignShortUrl }) => {
         return;
       }
 
-      if (!e.target.longUrl.value.includes("https://")) {
+      if (!validUrl.isUri(e.target.longUrl.value)) {
         setErrorState(
-          'Please make sure your URL is in the proper format. Ex: "http://gatherly.io"'
+          'Please make sure your URL is in a valid format. Ex: "https://gatherly.io"'
         );
         return;
       }
@@ -31,13 +38,15 @@ const UrlConvertForm = ({ assignShortUrl }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputField
-        id={"longUrl"}
-        label="Enter your url below"
-        error={errorState}
-      />
-      <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
+    <form data-testid="form" onSubmit={handleSubmit}>
+      <div className="form__row">
+        <InputField
+          id={"longUrl"}
+          label="Enter your url below"
+        />
+        <Button copy="snip it" type="submit" dataCy={"btn__submit"} />
+      </div>
+      {errorState && <Toast clearFn={clearError} type="fail" message={errorState}/>  }
     </form>
   );
 };

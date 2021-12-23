@@ -1,39 +1,44 @@
 @use "./variables" as *;
 //media queries
 
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $desktop) {
     @content;
   }
 }
 
-
 //spacings
 @mixin page-padding($size) {
-    padding: $size 0.5rem 0 0.5rem;
-  
-    @include desktop {
-      padding: $size 10% 0 10%;
-    }
+  padding: $size 0.5rem 0 0.5rem;
+
+  @include desktop {
+    padding: $size 10% 0 10%;
   }
+}
 
 //custom rules
 @mixin space-reset {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin label-text {
-    font-size: 14px;
-    margin-bottom: 0.75rem;
+  font-size: 14px;
+  margin-bottom: 0.75rem;
 }
 
 @mixin link-container {
-    border-radius: 8px;
-    border-radius: 1px solid black;
-    height: 2.5rem;
-    padding: 0.3rem;
-    font-size: 1.3rem;
+  border-radius: 8px;
+  border-radius: 1px solid black;
+  height: 2.5rem;
+  padding: 0.3rem;
+  font-size: 1.3rem;
 }
 
 

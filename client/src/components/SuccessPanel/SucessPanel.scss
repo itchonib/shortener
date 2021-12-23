@@ -1,6 +1,15 @@
 @use "../../styles//partials/mixins.scss" as *;
 
 .success-panel {
+
+    &__row {
+        @include tablet {
+            display: flex;
+            width: 100%;
+            align-items: flex-end
+        }
+    }
+
     &__message {
         @include label-text;
     }

@@ -1,0 +1,11 @@
+@use "../../styles//partials/mixins.scss" as *;
+
+.form {
+    &__row {
+        @include tablet {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}

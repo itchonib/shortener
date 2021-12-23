@@ -5,17 +5,32 @@
     flex-direction: column;
     margin: 1rem 0;
 
+    @include tablet {
+        flex-grow: .7;
+        @include space-reset;
+    }
+
     &__label {
         @include label-text;
     }
 
     &__field {
         @include link-container;
+
+        @include tablet {
+            border-radius: 8px 0 0 8px;
+            border-right: none;
+        }
     }
 
     &__error {
         margin-top: 0.5rem;
         color: red;
         font-size: 0.75rem;
+
+        @include tablet {
+            position: absolute;
+            bottom: -20px;
+        }
     }
 }

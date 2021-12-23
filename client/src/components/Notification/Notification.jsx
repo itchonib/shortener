@@ -1,24 +1,25 @@
 import React, {useEffect, useState} from 'react'
-import './Toast.scss'
+import './Notification.scss'
 
-const Toast = ({type, message}) => {
+const Toast = ({type, message, clearFn}) => {
     const [showToast, setShowToast] = useState(false)
 
     useEffect(()=>{
         setShowToast(true)
         return setTimeout(() => {
             setShowToast(false)
-        },3800)
-    },[message])
+            clearFn()
+        },3500)
+    },[message, clearFn])
 
     if (!showToast) {
         return <></>
     }
 
     return (
-        <div className={`toast toast--${type}`}> 
+        <div className={`toast`}> 
             <div className='toast__message-wrapper'>
-                <p className='toast__message'> {message} </p>
+                <p className={`toast__message toast__message--${type}`}> {message} </p>
             </div>
         </div>
     )
