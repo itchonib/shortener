@@ -4,7 +4,7 @@
 Long URLs aren't easy to email, tweet, or otherwise share. This application takes long urls and shortens them. 
 
 ## 🌱 Set Up
-1. Clone this repo onto your local machine using `git clone` and open it
+1. Clone this repo onto your local machine using `git clone git@github.com:itchonib/url-shortener.git` and open it
 2. Ensure you are in the root folder (url-shortener)
 3. Run the command `npm run install:all` to install all client and server-side dependicies 
 4. Create and .env file in the root of your directory. Make sure your .env file has the below set up (the MongoDB connection string has been emailed). Reminder that if you change the`PORT`, please update `BASE_URL` and the proxy value in the package.json of the client:
@@ -19,7 +19,7 @@ BASE_URL=http://localhost:8080
 
 1. Any user visiting the page can use the site 
 
-## ☁️ Solution Plan 
+## 💡 Solution Plan 
 
 1. Design [rough plan](https://www.figma.com/file/HknyxyN6SrUzUl3bivfCv3/Snip-It?node-id=0%3A1) for FE design and set up database
 2. Set up API using Express and add route tests 
@@ -44,7 +44,7 @@ The front end was built with react components and sass files. Apart from the bui
 - [`react-router-dom`](https://www.npmjs.com/package/react-router-dom) v6 was used to set up routes on the front end
 
 ### Database
-MongoDB was utilized as the database for this application.
+[MongoDB](https://www.mongodb.com/) was utilized as the database for this application.
 
 ### Server Side 
 The server side was built in [`Node.js`](https://nodejs.org/en/) with [`Express`](https://expressjs.com/). [`Mongoose`](https://mongoosejs.com/) was used as the ORM. Along with standard packages like [`dotenv`](https://www.npmjs.com/package/dotenv), [`nodemon`](https://www.npmjs.com/package/nodemon), and [`cors`](https://www.npmjs.com/package/cors), more notable packages include:  
@@ -77,7 +77,7 @@ In order to create a cache layer and use react testing library for the first tim
 
 Documentation for all packages listed above were also consulted often for best practices. 
 
-## Running Project with Cache 
+## 🏃 Running Project with Cache 
 
 This project utilized [redis](https://redis.io/) and [util](https://www.npmjs.com/package/util) to set up the cache layer.
 
