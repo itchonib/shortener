@@ -7,7 +7,6 @@ const Home = () => {
   const [shortUrl, setShortUrl] = useState(null);
 
   const assignShortUrl = (shortUrl) => {
-      console.log(shortUrl)
       setShortUrl(shortUrl)
   }
   return (

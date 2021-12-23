@@ -29,8 +29,6 @@ router.get("/:id", async (req, res) => {
     const url = await Url.findOne({
       shortUrl: `${process.env.BASE_URL}/${req.params.id}`,
     }).cache(`${process.env.BASE_URL}/${req.params.id}`);
-    // console.log(url)
-    // {key: `${process.env.BASE_URL}/${req.params.id}`, expire: 100000}
     res.redirect(url.longUrl);
   } catch (error) {
     res.status(404).send(`Url is not found at ${new Date()}: ${error}}`);
