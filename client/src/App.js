@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home/Home'
 import NavigationBar from './components/NavigationBar/NavigationBar';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Home />}/>
     </Routes>
+    <Footer/>
   </BrowserRouter>
   );
 }
