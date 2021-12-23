@@ -11,7 +11,7 @@
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "cypress": "npm run dev \"cd client && npm run cypress\"",
-    "install:all": "concurrently --kill-others-on-fail \"npm i\" \"cd client && npm i\""
+    "install:all": "npm i & cd client && npm i"
   },
   "keywords": [],
   "author": "",
