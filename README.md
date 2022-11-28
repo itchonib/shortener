@@ -1,4 +1,4 @@
-# 📥  Submission: 🔗 Url Shortener 
+# 📥  🔗 Url Shortener 
 
 ## Description
 Long URLs aren't easy to email, tweet, or otherwise share. This application takes long urls and shortens them. 
